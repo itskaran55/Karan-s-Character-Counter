@@ -1,0 +1,73 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background-color: #001931;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+body::before
+{
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-image: linear-gradient(#f23b56,#8023dc);
+    transform: translate(520px,210px);
+    border-radius: 50%;
+    /* z-index: 10; */ 
+    animation: example 4s alternate infinite;
+}
+@keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:90px;}
+    75%  {background-color:green; left:0px; top:90px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+.container
+{
+    background-color:rgba(205, 205, 205, 0);
+    border: inset rgba(205, 205, 205, 0);
+    padding: 10px 15px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 2.5);
+    backdrop-filter: blur(5px);
+    z-index: 10;
+    height: 400px;
+    border-radius: 10px;
+}
+.text textarea
+{
+    width: 100%;
+    margin-top: 10px;
+    /*  height: 100%; */
+    padding: 12px 15px;
+    font-size: 1em;
+}
+.container h1
+{
+    color: aliceblue;
+    animation: krn 4s linear infinite;
+}
+@keyframes krn {
+    0%   {color: red;}
+    25%  {color: yellow;}
+    50%  {color: blue;}
+    75%  {color: green;}
+    100% {color: red;}
+}
+.char_count
+{
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}

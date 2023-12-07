@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karan's Character Counter</title>
+    <link rel="stylesheet" href="Karan's Character Counter.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Mooli&family=Nunito+Sans:opsz,wght@6..12,300&family=Poppins:wght@300&display=swap');
+      </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Karan's Character Counter</h1>
+        <div class="text">
+            <textarea name="Character" class="txt" cols="40" rows="17"></textarea>
+        </div>
+        <div class="char_count">
+            <p class="total_count">
+                Total Character : <span class="sp1">0</span>
+            </p>
+            <p class="remaining_count">
+                Remaining Character : <span class="sp2">100</span>
+            </p>
+        </div>
+    </div>
+    <script>
+        let txt = document.querySelector('.txt');
+        let sp1 = document.querySelector('.sp1');
+        let sp2 = document.querySelector('.sp2');
+
+        txt.addEventListener("input",()=>{
+            let total = txt.value.length;
+            sp1.innerHTML = total;
+            sp2.innerHTML = 100 - total;
+
+            if(total === 100)
+            {
+                txt.disabled = true;
+            }
+            else
+            {
+                txt.disabled = false;
+            }
+        })
+    </script>
+</body>
+</html>
